@@ -20,8 +20,9 @@
     .nav-menu{display:flex;list-style:none;gap:.5rem}
     .nav-menu a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:16px;transition:.2s}
     .nav-menu a:hover{background:rgba(255,255,255,.18)}
-    .hero{background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon points="0,0 1000,300 1000,1000 0,700" fill="%23ffffff" opacity="0.03"/><polygon points="0,200 1000,0 1000,400 0,600" fill="%23ffffff" opacity="0.02"/></svg>'), linear-gradient(135deg,var(--primary),var(--primary-2));
-    background-repeat:no-repeat, no-repeat;
+    .hero{background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon points="0,0 1000,300 1000,1000 0,700" fill="%23ffffff" opacity="0.03"/><polygon points="0,200 1000,0 1000,400 0,600" fill="%23ffffff" opacity="0.02"/></svg>');
+	animation: float 30s infinite linear;
+    background-repeat:
     background-size:cover, cover;
     background-position:center, center;color:#fff;text-align:center;padding:90px 20px 70px;position:relative;overflow:hidden}
     .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(1200px 400px at 10% -20%,rgba(255,255,255,.18),transparent),radial-gradient(1000px 500px at 120% 10%,rgba(255,255,255,.12),transparent)}
@@ -146,10 +147,7 @@
   height:40px; padding:0 14px; border-radius:12px; line-height:1; 
 }
 .nav-menu li{position:relative}
-.has-dropdown > a::after{
-  content:''; width:8px; height:8px; margin-left:6px; border-right:2px solid #fff; border-bottom:2px solid #fff;
-  transform:rotate(45deg); opacity:.85;
-}
+
 .has-dropdown .dropdown{
   position:absolute; top:100%; left:0; min-width:160px;
   background:rgba(255,255,255,.92); color:#0f172a;
@@ -181,11 +179,7 @@
   height:40px; padding:0 14px; border-radius:12px; line-height:1;
 }
 .nav-menu li{position:relative}
-.has-dropdown > a::after{
-  content:''; width:8px; height:8px; margin-left:6px;
-  border-right:2px solid #fff; border-bottom:2px solid #fff;
-  transform:rotate(45deg); opacity:.85;
-}
+
 .has-dropdown .dropdown{
   position:absolute; top:calc(100% + 6px); left:0; min-width:152px;
   background:rgba(255,255,255,.92); color:#0f172a;
@@ -220,44 +214,105 @@
 .nav-menu{margin-left:auto;justify-content:flex-end}
 
 
-/* Right-align nav + dropdown */
 .nav{display:flex;align-items:center;justify-content:space-between}
-.nav-menu{margin-left:auto;display:flex;align-items:center;gap:.75rem;justify-content:flex-end}
-.nav-menu a{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 14px;border-radius:12px;line-height:1}
-.nav-menu li{position:relative}
-.has-dropdown > a::after{content:'';width:8px;height:8px;margin-left:6px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg);opacity:.85}
-.has-dropdown .dropdown{position:absolute;top:calc(100% + 6px);left:0;min-width:152px;background:rgba(255,255,255,.92);color:#0f172a;border:1px solid rgba(255,255,255,.6);border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.18);padding:4px;list-style:none;opacity:0;visibility:hidden;transform: translateY(6px) scale(.98);transition:.18s ease;backdrop-filter: blur(10px) saturate(120%);z-index:60}
-.has-dropdown:hover .dropdown,.has-dropdown:focus-within .dropdown{opacity:1;visibility:visible;transform: translateY(0) scale(1)}
-.has-dropdown .dropdown a{display:block;padding:8px 10px;border-radius:10px;color:#0f172a;text-decoration:none;white-space:nowrap}
-.has-dropdown .dropdown a:hover{background:linear-gradient(180deg,#f1f5f9,#e2e8f0);box-shadow: inset 0 0 0 1px rgba(148,163,184,.35)}
+.nav-menu{margin-left:auto;display:flex;gap:.75rem;align-items:center}
+
+/* --- Nav dropdown chevron (white V) --- */
+
+/* optional hover: flip chevron */
+.has-dropdown:hover > a::after,
+.has-dropdown:focus-within > a::after{
+  transform: rotate(180deg);
+}
+
+
+/* === Modern geometric hero background === */
+.hero{ 
+  position: relative;
+  background: radial-gradient(1600px 800px at 10% -20%, rgba(96,165,250,.25) 0%, rgba(96,165,250,0) 60%),
+              radial-gradient(1200px 600px at 120% 20%, rgba(56,189,248,.18) 0%, rgba(56,189,248,0) 60%),
+              linear-gradient(180deg, #1e3a8a 0%, #1f4aa1 40%, #1e40af 100%);
+  overflow: hidden;
+  isolation: isolate;
+}
+/* SVG polygon overlay */
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 800'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg opacity='0.22'%3E%3Cpolygon points='0,0 1440,220 1440,0 0,0' fill='%23ffffff'/%3E%3C/g%3E%3Cg opacity='0.10'%3E%3Cpolygon points='0,140 1440,400 1440,600 0,340' fill='%23ffffff'/%3E%3C/g%3E%3Cg opacity='0.08'%3E%3Cpolygon points='0,480 1440,720 1440,800 0,560' fill='%23ffffff'/%3E%3C/g%3E%3Cg opacity='0.10'%3E%3Cpolygon points='0,0 0,260 480,160 480,0' fill='%23ffffff'/%3E%3C/g%3E%3Cg opacity='0.06'%3E%3Cpolygon points='960,0 1440,0 1440,180 960,240' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 0;
+}
+/* Soft subtle grid strips for depth */
+.hero::after{
+  content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image: linear-gradient(120deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,0) 30%),
+                    linear-gradient(-120deg, rgba(255,255,255,.035) 0%, rgba(255,255,255,0) 35%);
+  mix-blend-mode: soft-light;
+}
+/* Keep content above the overlays */
+.hero > *{ position: relative; z-index: 1; }
+
+
+/* === Normalize dropdown chevron: keep only V, remove inner arms === */
+.has-dropdown > a::before{ content:none !important; display:none !important }
+.has-dropdown > a::after{
+  content:"";
+  display:inline-block;
+  width:14px;height:14px;
+  margin-left:8px; margin-top:1px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 5.5l4 4 4-4' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:center; background-size:contain;
+  vertical-align:middle; transform:none; opacity:.95;
+}
+/* Disable any previous border-based caret */
+.has-dropdown > a{ position:relative }
+.has-dropdown > a{ --_caret:none }
+
+
+/* === Brand line-spacing tighten === */
+.brand{ line-height:1.05; }
+.brand small{
+  display:block;
+  font-size:.74rem;
+  letter-spacing:.06em;
+  line-height:1;
+  margin-top:-6px; /* tighten gap between KR/EN */
+}
+
+
+/* === Brand spacing safe override (no overlap) === */
+.brand{ line-height:1.12; }           /* slightly more breathing room */
+.brand small{
+  display:block;
+  font-size:.75rem;
+  letter-spacing:.06em;
+  line-height:1.05;
+  margin-top:2px;                     /* ensure visual gap */
+}
 
 </style>
 </head>
 <body>
   <header class="header">
-    <nav class="nav">
-      <a class="brand" href="#home" aria-label="홍우시스템즈 홈">홍우시스템즈<small>HONGWOO SYSTEMS</small></a>
-      <ul class="nav-menu">
-  <li><a href="#services">서비스</a></li>
-  <li><a href="#tracks">컨설팅 분야</a></li>
-  <li class="has-dropdown">
-    <a href="programs.html">교육프로그램</a>
-    <ul class="dropdown" aria-label="교육프로그램 하위메뉴">
-      <li><a href="programs.html">모집</a></li>
+  <nav class="nav">
+    <a class="brand" href="#home" aria-label="홍우시스템즈 홈">홍우시스템즈<small>HONGWOO SYSTEMS</small></a>
+    <ul class="nav-menu">
+      <li><a href="#services">서비스</a></li>
+      <li><a href="#tracks">컨설팅 분야</a></li>
+      <li class="has-dropdown">
+        <a href="programs.html">교육프로그램</a>
+        <ul class="dropdown" aria-label="교육프로그램 하위메뉴">
+          <li><a href="programs.html">모집</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact">문의</a></li>
     </ul>
-  </li>
-  <li><a href="#contact">문의</a></li>
-</ul>
-  </li>
-  <li><a href="#contact">문의</a></li>
-</ul></li></ul>
-  </li>
-  
-</ul></li></ul></li>
-        
-      </ul>
-    </nav>
-  </header>
+  </nav>
+</header>
 
   <section id="home" class="hero">
     <h1>교육·엔지니어 기술 컨설팅 파트너</h1>
