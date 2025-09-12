@@ -367,7 +367,7 @@
       padding: 8px 6px;
       text-align: center;
       vertical-align: middle;
-      font-size: 13px;
+      font-size: 15px;
     }
     
     .schedule-table th {
@@ -386,14 +386,14 @@
     
     .day1-header, .day2-header {
       background-color: #bee3f8;
-	  font-weight: bold;
+      font-weight: bold;
       color: #1a365d;
-      font-size: 20px;
+      font-size: 18px;
     }
     
     .instructor {
       color: #3182ce;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 500;
     }
     
@@ -406,14 +406,15 @@
     .activity-cell {
       background-color: #ffffff;
       color: #2d3748;
-      font-size: 20px;
-      font-weight: 600;
+      font-weight: bold;
     }
     
     .wrap-up-cell {
       background-color: #f0fff4;
-      font-size: 15px;
-      font-weight: 600;
+    }
+    
+    tr:hover {
+      background-color: #f8f9fa;
     }
     
     /* Registration Info Card */
@@ -457,6 +458,7 @@
       font-weight:800;
       margin:0 0 6px 0;
       color:#0f172a;
+      font-size:15px;
     }
     
     .info-note ul{
@@ -645,6 +647,7 @@
 </tr>
 </thead>
 <tbody>
+<!-- 9:00-9:20 -->
 <tr>
 <td class="time-cell">9:00-9:20</td>
 <td class="activity-cell">등록</td>
@@ -652,113 +655,111 @@
 <td></td>
 <td></td>
 </tr>
+
+<!-- 9:30-10:00 -->
 <tr>
 <td class="time-cell">9:30-10:00</td>
-<td class="activity-cell" rowspan="2">
-    온디바이스 AI 와 Real-Time<br/>
-    Computing 의 이해
-</td>
-<td class="instructor" rowspan="2">이론</td>
-<td class="activity-cell" rowspan="2">
-    온디바이스 AI 플랫폼과<br/>
-    최적화의 이해
-</td>
+<td class="activity-cell">온디바이스 AI와 Real-Time<br>Computing의 이해</td>
+<td class="instructor">이론</td>
+<td class="activity-cell" rowspan="2">온디바이스 AI 플랫폼과<br>최적화의 이해</td>
 <td class="instructor" rowspan="2">이론</td>
 </tr>
+
+<!-- 10:00-10:20 -->
 <tr>
-<td class="time-cell">10:00-10:30</td>
-</tr>
-<tr>
-<td class="time-cell">10:30-11:00</td>
-<td class="activity-cell" rowspan="2">
-    Rubik Pi 3 와 VS Code 를 이용한<br/>
-    개발 환경 구축
-</td>
-<td class="instructor" rowspan="2">실습</td>
-<td class="activity-cell" rowspan="3">
-    인퍼런스 드라이버 개발
-</td>
-<td class="instructor" rowspan="3">이론<br/>실습</td>
-</tr>
-<tr>
-<td class="time-cell">11:00-11:30</td>
-</tr>
-<tr>
-<td class="time-cell">11:30-12:00</td>
-<td class="activity-cell">
-    Linux 명령어 처리와 Shell<br/>
-    프로그래밍
-</td>
-<td class="instructor">이론<br/>실습</td>
-</tr>
-<tr>
-<td class="time-cell">12:00-12:30</td>
-<td class="activity-cell">
-    Linux 명령어 처리와 Shell<br/>
-    프로그래밍
-</td>
-<td class="instructor">이론<br/>실습</td>
-<td class="break-cell" rowspan="2">점심</td>
-<td rowspan="2"></td>
-</tr>
-<tr>
-<td class="time-cell">12:30-13:00</td>
-<td class="break-cell" rowspan="2">점심</td>
-<td rowspan="2"></td>
-</tr>
-<tr>
-<td class="time-cell">13:00-13:30</td>
-<td class="activity-cell" rowspan="3">
-    DNN 모델의 내부 구조와<br/>
-    모델 출력이슈
-</td>
-<td class="instructor" rowspan="3">이론<br/>실습</td>
-</tr>
-<tr>
-<td class="time-cell">13:30-14:00</td>
-<td class="activity-cell" rowspan="2">DNN 의 이해</td>
+<td class="time-cell">10:00-10:20</td>
+<td class="activity-cell" rowspan="2">DNN의 이해</td>
 <td class="instructor" rowspan="2">이론</td>
 </tr>
+
+<!-- 10:30-10:50 -->
 <tr>
-<td class="time-cell">14:00-14:30</td>
+<td class="time-cell">10:30-10:50</td>
+<td class="activity-cell" rowspan="3">인퍼런스 드라이버 개발</td>
+<td class="instructor" rowspan="3">실습</td>
 </tr>
+
+<!-- 11:00-11:20 -->
 <tr>
-<td class="time-cell">14:30-15:00</td>
+<td class="time-cell">11:00-11:20</td>
 <td class="activity-cell" rowspan="2">DNN 프로그래밍</td>
 <td class="instructor" rowspan="2">실습</td>
-<td class="activity-cell" rowspan="2">파이프라인드 인퍼런스 드라이버</td>
-<td class="instructor" rowspan="2">이론</td>
 </tr>
+
+<!-- 11:30-11:50 -->
 <tr>
-<td class="time-cell">15:00-15:30</td>
+<td class="time-cell">11:30-11:50</td>
 </tr>
+
+<!-- 12:00-13:00 -->
 <tr>
-<td class="time-cell">15:30-16:00</td>
-<td class="activity-cell" rowspan="2">RTOS 의 이해</td>
-<td class="instructor" rowspan="2">이론</td>
-<td class="activity-cell" rowspan="2">파이프라인드 인퍼런스 드라이버</td>
+<td class="time-cell">12:00-13:00</td>
+<td class="break-cell">점심</td>
+<td></td>
+<td class="break-cell">점심</td>
+<td></td>
+</tr>
+
+<!-- 13:00-13:30 -->
+<tr>
+<td class="time-cell">13:00-13:30</td>
+<td class="activity-cell" rowspan="2">Rubik Pi 3와 VS Code를 이용한<br>개발 환경 구축</td>
 <td class="instructor" rowspan="2">실습</td>
+<td class="activity-cell" rowspan="3">DNN 모델의 내부 구조와<br>모델 출력이슈</td>
+<td class="instructor" rowspan="3">이론<br>실습</td>
 </tr>
+
+<!-- 13:30-13:50 -->
 <tr>
-<td class="time-cell">16:00-16:30</td>
+<td class="time-cell">13:30-13:50</td>
 </tr>
+
+<!-- 14:00-14:20 -->
 <tr>
-<td class="time-cell">16:30-17:00</td>
+<td class="time-cell">14:00-14:20</td>
+<td class="activity-cell" rowspan="2">RTOS의 이해</td>
+<td class="instructor" rowspan="2">이론</td>
+</tr>
+
+<!-- 14:30-14:50 -->
+<tr>
+<td class="time-cell">14:30-14:50</td>
+<td class="activity-cell" rowspan="3">파이프라인된 인퍼런스 드라이버</td>
+<td class="instructor" rowspan="3">이론</td>
+</tr>
+
+<!-- 15:00-15:20 -->
+<tr>
+<td class="time-cell">15:00-15:20</td>
+<td class="activity-cell" rowspan="2">Linux 명령어 처리와 Shell<br>프로그래밍</td>
+<td class="instructor" rowspan="2">이론<br>실습</td>
+</tr>
+
+<!-- 15:30-15:50 -->
+<tr>
+<td class="time-cell">15:30-15:50</td>
+</tr>
+
+<!-- 16:00-16:20 -->
+<tr>
+<td class="time-cell">16:00-16:20</td>
 <td class="activity-cell" rowspan="2">실시간 스케줄링과 동기화</td>
 <td class="instructor" rowspan="2">이론</td>
+<td class="activity-cell" rowspan="2">파이프라인된 인퍼런스 드라이버</td>
+<td class="instructor" rowspan="2">실습</td>
+</tr>
+
+<!-- 16:30-16:50 -->
+<tr>
+<td class="time-cell">16:30-16:50</td>
+</tr>
+
+<!-- 16:50-17:00 -->
+<tr>
+<td class="time-cell">16:50-17:00</td>
+<td class="wrap-up-cell">Q&A와 wrap-up</td>
+<td></td>
 <td class="wrap-up-cell">전체 교육 정리와 Q&A</td>
-<td></td>
-</tr>
-<tr>
-<td class="time-cell">17:00-17:30</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="time-cell">17:20-17:30</td>
-<td class="wrap-up-cell">Q&A 와 wrap-up</td>
-<td></td>
-<td></td>
 <td></td>
 </tr>
 </tbody>
